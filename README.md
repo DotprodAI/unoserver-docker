@@ -1,6 +1,6 @@
 # Unoserver Docker Image
 
-Docker image for unoserver. This image is designed to be used a server as a second container accompanying another Python contain which connects to it using [UnoClient](https://github.com/unoconv/unoserver/blob/master/src/unoserver/client.py).
+Docker image for unoserver. This image is designed to be used as a server and consummed by a [Python client](https://github.com/unoconv/unoserver/blob/master/src/unoserver/client.py).
 
 ## The environment
 
@@ -34,7 +34,6 @@ Docker maps your directory with /tmp directory in the container.
 
 You might need to add the option `:z` or `:Z` like `<your directory>:/tmp/:z` or `<your directory>:/tmp/:Z` if you are using SELinux. See [Docker docs](https://docs.docker.com/storage/bind-mounts/#configure-the-selinux-label) or [Podman docs](https://docs.podman.io/en/latest/markdown/podman-run.1.html#volume-v-source-volume-host-dir-container-dir-options).
 
-
 ## How to contribute / do it yourself?
 
 ### Requirements
@@ -42,9 +41,8 @@ You might need to add the option `:z` or `:Z` like `<your directory>:/tmp/:z` or
 You need the following tools:
 
 - A bash compliant command line
-
 - Docker installed and in your path
 
 ### How to build
 
-        docker build .
+    docker build .
