@@ -51,8 +51,10 @@ RUN pip install -U unoserver
 
 USER ${UID}
 WORKDIR /home/worker
+COPY . /home/worker
+
 ENV HOME="/home/worker"
 
 VOLUME ["/tmp"]
 
-ENTRYPOINT ["unoserver", "--interface=0.0.0.0", "--port=2003"]
+CMD ["unoserver", "--interface", "0.0.0.0", "--port", "2003"]
