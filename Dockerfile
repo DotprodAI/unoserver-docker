@@ -57,4 +57,4 @@ ENV HOME="/home/worker"
 
 VOLUME ["/tmp"]
 
-CMD ["unoserver", "--interface", "0.0.0.0", "--port", "2003"]
+CMD ["unoserver", "--interface", "0.0.0.0", "--port", "2003", "--libreoffice-pid-file", "/tmp/libreoffice_pid"]
